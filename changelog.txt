@@ -20,6 +20,19 @@
 
 
 
+-------------------------------------------------------------------
+0.90.3:
+
+-Organized licenses
+
+-Session support in the Windows Desktop Edition (fixed can't create / reset an admin account)
+
+-------------------------------------------------------------------
+
+
+
+
+
 
 
 
