@@ -73,6 +73,17 @@
 
 
 
+-------------------------------------------------------------------
+1.04.0:
+
+-Automated bash script "BUILD-PHP-FOR-LINUX-DESKTOP.bash" added to linux desktop setup
+
+-Revised README
+
+-------------------------------------------------------------------
+
+
+
 
 
 

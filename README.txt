@@ -7,15 +7,23 @@ Staging (containers / binaries / configs / etc) for desktop support of Open Cryp
   
 =========================================================================================================================================
 
-If you are using the LINUX Desktop Edition, and you get an error at startup like "CGI program sent malformed or too big", you probably need to compile a custom "php-cgi" binary file on the system you are using, and replace the "php-cgi-custom" binary in the Desktop Edition main folder. Sometimes compiled PHP binaries aren't very portable between different systems. To see if this is really the problem by command-line, open a terminal and use the "cd" (change directory) command to go to the main directory of the Desktop Edition, and then type this command:
+If you are using the LINUX Desktop Edition, and you get an error at startup like "CGI program sent malformed or too big", you probably need to compile a custom "php-cgi" binary file on the system you are using, and replace the "php-cgi-custom" binary in the Desktop Edition main folder. Sometimes compiled PHP binaries aren't very portable between different linux systems. To see if this is really the problem by command-line, open a terminal and use the "cd" (change directory) command to go to the main directory of the Desktop Edition, and then type this command:
 
 ./php-cgi-custom INSTALL_CRYPTO_TRACKER_HERE/index.php
 
-If you see an error like this, you system is NOT compatible with the included "php-cgi-custom" PHP binary, and you'll need to build a new one for your system:
+If you see an error like this below, you system is NOT compatible with the included "php-cgi-custom" PHP binary, and you'll need to build a new one for your system:
 
 ./php-cgi-custom: error while loading shared libraries: XXXXX.so.X: cannot open shared object file: No such file or directory
 
-Documentation for building custom PHP binaries on linux can be found here (as well as the source code to download to build it with):
+Try running the script "BUILD-PHP-FOR-LINUX-DESKTOP.bash" in the Desktop Edition main folder, which should fix things automatically for you. Just make sure it's file permissions are set to "executable" (chmod +x, OR chmod 755 should do that). 
+
+Open a terminal and use the "cd" (change directory) command to go to the main directory of the Desktop Edition, and then type this command:
+
+./BUILD-PHP-FOR-LINUX-DESKTOP.bash
+
+If this automated script gives you issues, see manual PHP build instructions below...
+
+Documentation for manually building custom PHP binaries on linux can be found here (as well as the source code to download to build it with):
 
 https://github.com/php/php-src/blob/master/README.md
 
