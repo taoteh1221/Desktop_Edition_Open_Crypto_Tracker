@@ -516,9 +516,38 @@ make install
 
 
 echo " "
-echo "${green} The old PHP CGI binary '$APP_ROOT/php-cgi-custom' within your Desktop Edition has been replaced with a new custom PHP CGI binary, that should be compatible with your system. Try to run linux Desktop Edition of this crypto tracker now, and it should work, IF it was indeed a shared library issue.${reset}"
+echo "${cyan}UNLESS YOU SEE ANY ERRORS ABOVE, ${green}the old PHP CGI binary '$APP_ROOT/php-cgi-custom' within your Desktop Edition should have just been replaced with a new custom PHP CGI binary, that should be compatible with your system. Try to run linux Desktop Edition of this crypto tracker now, and it should work...IF it was indeed a shared library issue.${reset}"
 echo " "
 echo "PLEASE REPORT ANY ISSUES HERE: https://github.com/taoteh1221/Open_Crypto_Tracker/issues"
+echo " "
+
+
+######################################
+
+
+echo "${yellow} "
+read -n1 -s -r -p $"ONE LAST THING: Press d to delete the temporary CUSTOM PHP source / binaries we created at $HOME/php-source / $HOME/php-binaries, (or press k if you prefer to keep them [we don't need them to run the app])..." key
+echo "${reset} "
+
+    if [ "$key" = 'd' ] || [ "$key" = 'D' ]; then
+    echo " "
+    echo "${cyan}Deleting CUSTOM PHP source / binaries, please wait...${reset}"
+    echo " "
+    
+    rm -rf $HOME/php-binaries
+    rm -rf $HOME/php-source
+    
+    echo "${green}CUSTOM PHP source / binaries were deleted, now exiting this script...${reset}"
+    echo " "
+
+
+    else
+    echo " "
+    echo "${green}Skipping deletion of CUSTOM PHP source / binaries, now exiting this script...${reset}"
+    echo " "
+    exit
+    fi
+
 echo " "
 
 
