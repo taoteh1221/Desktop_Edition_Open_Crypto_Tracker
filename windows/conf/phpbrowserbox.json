@@ -1,0 +1,13 @@
+{
+	"#title": "The title of your application",
+	"title": "Open Crypto Tracker - Desktop Edition (Windows)",
+
+	"#version": "The current of your application",
+	"version": "0.0.0",
+
+	"#devtools": "Set to 1 to enable devtools",
+	"devtools": 1,
+
+	"#severalwayson": "Set to 1 to always leave server active in the background",
+	"severalwayson": 0
+}

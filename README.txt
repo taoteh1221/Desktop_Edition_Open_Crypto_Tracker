@@ -1,6 +1,14 @@
 Staging (containers / binaries / configs / etc) for desktop support of Open Crypto Tracker: https://github.com/taoteh1221/Open_Crypto_Tracker
 
 
+IMPORTANT NOTES...
+
+The below folders had to be compressed into RAR files, to meet github's 100mb limit per-file:
+
+/linux/ => linux.rar
+/windows/bin/bbwebkit/ => /windows/bin/bbwebkit.rar
+
+
 =========================================================================================================================================
 
   LINUX Desktop Edition Error: "CGI program sent malformed or too big"
