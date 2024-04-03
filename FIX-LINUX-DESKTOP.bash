@@ -327,37 +327,53 @@ app_path_result="${app_path_result#*$1:}"
      # If library not found, attempt package installation
      else
 
-     echo " "
-     echo "${cyan}Installing required component $1, please wait...${reset}"
-     echo " "
+     echo " " > /dev/tty
+     echo "${cyan}Installing required component $1, please wait...${reset}" > /dev/tty
+     echo " " > /dev/tty
      
-     $PACKAGE_INSTALL $1 -y
+     sleep 1
      
+     $PACKAGE_INSTALL $1 -y > /dev/tty
      
-          # Handle package name exceptions...
-          if [ "$1" == "bsdtar" ]; then
-          
-          echo " "
-          echo "${cyan}Installing 'bsdtar' component included in an alternate package, please wait...${reset}"
-          echo " "
-          
-               # bsdtar on Ubuntu 18.x and higher
-               if [ -f "/etc/debian_version" ]; then
-               $PACKAGE_INSTALL libarchive-tools -y
-               # bsdtar on Redhat
-               elif [ -f "/etc/redhat-release" ]; then
-               $PACKAGE_INSTALL libarchive -y
-               fi
-               
-          fi
+     sleep 3
      
      
           # If UBUNTU snap was detected on the system, try a snap install too
           # (as they moved some libs over to snap-only now)
           if [ ! -z "$UBUNTU_SNAP_INSTALL" ]; then
-          $UBUNTU_SNAP_INSTALL $1
-          fi
           
+          echo " " > /dev/tty
+          echo "${yellow}CHECKING FOR '$1' as a SNAP PACKAGE, please AUTHORIZE INSTALLATION IF PROMPTED...${reset}" > /dev/tty
+          echo " " > /dev/tty
+          
+          sleep 3
+          
+          $UBUNTU_SNAP_INSTALL $1 > /dev/tty
+          
+          fi
+     
+     
+          # Handle package name exceptions...
+          if [ "$1" == "bsdtar" ]; then
+          
+          echo " " > /dev/tty
+          echo "${cyan}Installing 'bsdtar' component included in an alternate package, please wait...${reset}" > /dev/tty
+          echo " " > /dev/tty
+          
+               # bsdtar on Ubuntu 18.x and higher
+               if [ -f "/etc/debian_version" ]; then
+               $PACKAGE_INSTALL libarchive-tools -y > /dev/tty
+               # bsdtar on Redhat
+               elif [ -f "/etc/redhat-release" ]; then
+               $PACKAGE_INSTALL libarchive -y > /dev/tty
+               fi
+               
+          fi
+     
+     
+     sleep 2
+     
+     echo $(get_app_path "$1")
            
      fi
 
@@ -374,7 +390,7 @@ IS_UBUNTU=$(cat /etc/os-release | grep "PRETTY_NAME" | grep "Ubuntu")
 # so we need to run snap installs for every PRIMARY dependency install attempt below,
 # to try and assure we have all required PRIMARY dependencies we need
 if [ "$IS_UBUNTU" != "" ]; then
-UBUNTU_SNAP_INSTALL="$(get_app_path 'snap') install"
+UBUNTU_SNAP_INSTALL="sudo $(get_app_path 'snap') install"
 fi
 
 
@@ -563,7 +579,6 @@ echo " "
 sleep 2
 
 # 32-bit GTK2 RedHat support (for the 'RUN_CRYPTO_TRACKER' binary)
-$PACKAGE_INSTALL libgtk2.0-0 -y
 $PACKAGE_INSTALL gtk2 -y
 
 # Dev libs (including for the extensions we want to add)
@@ -617,7 +632,7 @@ mkdir $HOME/php-source > /dev/null 2>&1
 
 cd $HOME/php-source
 
-git clone https://github.com/php/php-src.git > /dev/null 2>&1
+git clone https://github.com/php/php-src.git
 
 cd php-src
 
