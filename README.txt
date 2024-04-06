@@ -23,11 +23,11 @@ If you see an error like this below, you system is NOT compatible with the inclu
 
 ./php-cgi-custom: error while loading shared libraries: XXXXX.so.X: cannot open shared object file: No such file or directory
 
-Try running the script "BUILD-PHP-FOR-LINUX-DESKTOP.bash" in the Desktop Edition main folder, which should fix things automatically for you. Just make sure it's file permissions are set to "executable" (chmod +x, OR chmod 755 should do that). 
+Try running the script "FIX-LINUX-DESKTOP.bash" in the Desktop Edition main folder, which should fix things automatically for you. Just make sure it's file permissions are set to "executable" (chmod +x, OR chmod 755 should do that). 
 
 Open a terminal and use the "cd" (change directory) command to go to the main directory of the Desktop Edition, and then type this command:
 
-./BUILD-PHP-FOR-LINUX-DESKTOP.bash
+./FIX-LINUX-DESKTOP.bash
 
 If this automated script gives you issues, see manual PHP build instructions below...
 
