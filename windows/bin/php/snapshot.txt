@@ -1,7 +1,7 @@
 This snapshot was automatically generated on
-Tue, 31 Jan 2023 21:55:34 +0000
+Tue, 04 Jun 2024 19:11:06 +0000
 
-Version: 8.2.2
+Version: 8.3.8
 Branch: HEAD
 Build: D:\a\php-ftw\php-ftw\php\vs16\x64\obj\Release_TS
 
@@ -78,25 +78,25 @@ Module: php_ftp.dll
 
 Module: php_intl.dll
 ===========================
-	icuuc71.dll
-	icuin71.dll
-	icuio71.dll
+	icuuc72.dll
+	icuin72.dll
+	icuio72.dll
 	vcruntime140_1.dll
 
-Module: icuuc71.dll
+Module: icuuc72.dll
 ===========================
-	icudt71.dll
+	icudt72.dll
 	vcruntime140_1.dll
 
-Module: icuin71.dll
+Module: icuin72.dll
 ===========================
-	icuuc71.dll
+	icuuc72.dll
 	vcruntime140_1.dll
 
-Module: icuio71.dll
+Module: icuio72.dll
 ===========================
-	icuuc71.dll
-	icuin71.dll
+	icuuc72.dll
+	icuin72.dll
 	vcruntime140_1.dll
 
 Module: php_ldap.dll

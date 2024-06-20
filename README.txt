@@ -5,8 +5,8 @@ IMPORTANT NOTES...
 
 The below folders had to be compressed into RAR files, to meet github's 100mb limit per-file:
 
-/linux/ => linux.rar
-/windows/bin/bbwebkit/ => /windows/bin/bbwebkit.rar
+/linux/ => linux.7z
+/windows/bin/bbwebkit/ => /windows/bin/bbwebkit.7z
 
 
 =========================================================================================================================================
