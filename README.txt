@@ -1,12 +1,13 @@
-Staging (containers / binaries / configs / etc) for desktop support of Open Crypto Tracker: https://github.com/taoteh1221/Open_Crypto_Tracker
+
+Staging (containers / binaries / configs / etc) for desktop support of Open Crypto Tracker.
 
 
 IMPORTANT NOTES...
 
-The below folders had to be compressed into RAR files, to meet github's 100mb limit per-file:
+The below files had to be compressed into 7zip files, to meet github's 100mb limit per-file:
 
-/linux/ => linux.7z
-/windows/bin/bbwebkit/ => /windows/bin/bbwebkit.7z
+/linux/libcef.so => /linux/libcef.so.7z
+/windows/libcef.dll => /windows/libcef.dll.7z
 
 
 =========================================================================================================================================
@@ -23,7 +24,7 @@ If you see an error like this below, you system is NOT compatible with the inclu
 
 ./php-cgi-custom: error while loading shared libraries: XXXXX.so.X: cannot open shared object file: No such file or directory
 
-Try running the script "FIX-LINUX-DESKTOP.bash" in the Desktop Edition main folder, which should fix things automatically for you. Just make sure it's file permissions are set to "executable" (chmod +x, OR chmod 755 should do that). 
+Try running the script "FIX-LINUX-DESKTOP.bash" in the Desktop Edition main folder (compatible with Debian / Fedora), which should fix things automatically for you. Just make sure it's file permissions are set to "executable" (chmod +x, OR chmod 755 should do that). 
 
 Open a terminal and use the "cd" (change directory) command to go to the main directory of the Desktop Edition, and then type this command:
 

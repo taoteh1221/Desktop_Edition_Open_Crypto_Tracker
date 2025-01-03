@@ -1,0 +1,56 @@
+{
+    "application": {
+        "single_instance_guid": "ct_desktop",
+        "dpi_aware": true
+    },
+    "debugging": {
+        "show_console": false,
+        "subprocess_show_console": false,
+        "log_level": "ERROR",
+        "log_file": "temp-other/debugging.log"
+    },
+    "main_window": {
+        "title": "Open Crypto Tracker (Desktop Edition)",
+        "icon": "temp-other/app-icon.ico",
+        "default_size": [1920, 1080],
+        "center_on_screen": true,
+        "minimize_to_tray": true,
+        "minimize_to_tray_message": "Open Crypto Tracker minimized to system tray...",
+    },
+    "popup_window": {
+        "default_size": [1920, 1080],
+        "center_relative_to_parent": true,
+    },
+    "web_server": {
+        "listen_on": ["127.0.0.1", 22345],
+        "www_directory": "INSTALL_CRYPTO_TRACKER_HERE",
+        "index_files": ["index.html", "index.php"],
+        "cgi_interpreter": "php-cgi-custom",
+        "cgi_extensions": ["php"],
+        "cgi_temp_dir": "",
+        "404_handler": "",
+        "hide_files": []
+    },
+    "chrome": {
+        "log_file": "temp-other/phpdesktop.log",
+        "log_severity": "default",
+        "cache_path": "temp-other/temp_chrome",
+        "remote_debugging_port": 0,
+        "command_line_switches": {
+            "enable-media-stream": "",
+            "enable-system-flash": ""
+        },
+        "enable_downloads": true,
+        "external_navigation": false,
+        "devtools_F12": true,
+        "reload_page_F5": true,
+        "context_menu": {
+            "enable_menu": true,
+            "navigation": true,
+            "print": true,
+            "view_source": true,
+            "open_in_external_browser": true,
+            "devtools": true
+        }
+    }
+}

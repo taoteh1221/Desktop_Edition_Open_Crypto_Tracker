@@ -185,6 +185,15 @@
 
 
 
+-------------------------------------------------------------------
+1.14.0:
+
+-Switched from phpbrowserbox back to PHPdesktop, for WINDOWS OS (phpbrowserbox is no longer compatible with the latest Windows 11 updates)
+
+-------------------------------------------------------------------
+
+
+
 
 
 
