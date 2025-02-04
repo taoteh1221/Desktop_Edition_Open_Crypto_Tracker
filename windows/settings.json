@@ -1,6 +1,6 @@
 {
     "application": {
-        "single_instance_guid": "",
+        "single_instance_guid": "opencryptotracker",
         "dpi_aware": true
     },
     "debugging": {
@@ -48,15 +48,15 @@
         "reload_page_F5": true,
         "devtools_F12": true,
         "remote_debugging_port": 0,
-        "runtime_style": "alloy",
+        "runtime_style": "chrome",
         "command_line_switches": {"disable-gpu": ""},
         "enable_downloads": true,
         "context_menu": {
             "enable_menu": true,
-            "navigation": true,
+            "navigation": false,
             "print": true,
             "view_source": true,
-            "open_in_external_browser": true,
+            "open_in_external_browser": false,
             "devtools": true
         }
     }
