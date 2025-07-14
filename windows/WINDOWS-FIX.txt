@@ -1,0 +1,7 @@
+
+
+IF YOU GET THE ERROR: "CGI program sent malformed or too big", YOU LIKELY NEED THE LATEST Microsoft Visual C++ LIBRARIES:
+
+https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+

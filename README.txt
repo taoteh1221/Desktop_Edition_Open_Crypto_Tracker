@@ -12,6 +12,16 @@ The below files had to be compressed into 7zip files, to meet github's 100mb lim
 
 =========================================================================================================================================
 
+  WINDOWS Desktop Edition Error: "CGI program sent malformed or too big"
+  
+=========================================================================================================================================
+
+IF YOU GET THE ERROR: "CGI program sent malformed or too big", YOU LIKELY NEED THE LATEST Microsoft Visual C++ LIBRARIES:
+
+https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+=========================================================================================================================================
+
   LINUX Desktop Edition Error: "CGI program sent malformed or too big"
   
 =========================================================================================================================================
