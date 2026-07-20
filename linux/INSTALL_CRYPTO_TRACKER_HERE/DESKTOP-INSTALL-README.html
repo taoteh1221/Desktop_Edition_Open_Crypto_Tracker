@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- /*
+ * Copyright 2014-2022 GPLv3, Open Crypto Tracker by Mike Kilday: Mike@DragonFrugal.com
+ */ -->
+
+<head>
+
+<title>Now Install Server Edition Here...</title>
+
+<style>
+
+.spacer {
+padding: 25px;
+}
+
+</style>
+
+<script src="_TEMP.js"></script>
+
+<script>
+
+// Wait until the DOM has loaded before running DOM-related scripting
+$(document).ready(function(){
+
+//////////////////////////////////////////////////////////
+
+
+
+        
+        
+    	$.get( "https://api.github.com/repos/taoteh1221/Open_Crypto_Tracker/releases/latest", function(data) {
+    	    
+    	var latest_version = data.tag_name;
+    	
+    	
+    	
+        	var latest_version_description = data.body;
+        	
+        	var latest_version_download = data.zipball_url;
+        	
+        	// Remove anything AFTER formatting in brackets in the description (including the brackets)
+        	// (removes the auto-added sourceforge download link)
+        	latest_version_description = latest_version_description.split('[')[0]; 
+        	
+        	latest_version_description = latest_version_description.replace("\n", "<br />");
+        	
+        	latest_version_description = latest_version_description.replace("\r", "<br />");
+        	
+        	latest_version_description = "LATEST UPGRADE INFORMATION (Open Crypto Tracker - Server Edition: v"+latest_version+")...<br /><br />" + latest_version_description.trim();
+        	
+        	latest_version_description = latest_version_description
+        	+ "<br /><br />Manual Install File Download Link:<br /><br /><a href='" + latest_version_download + "' target='_blank'>"+latest_version_download+"</a>";
+    	        
+            $("#upgrade_alert").css({ "display": "block" });
+            
+            $("#upgrade_alert").html("<div class='spacer'>"+latest_version_description+"</div>").css("color", "black"); 
+            
+    	    
+    	   
+    	});
+
+//////////////////////////////////////////////////////////
+
+});
+
+</script>
+
+</head>
+<body>
+<div id='upgrade_alert'></div>
+
+<div class='spacer'>
+Just drop the source files of the 'Server Edition' of this app in here. That's it, super easy! ;)
+</div>
+
+</body>
+</html>
